@@ -39,25 +39,25 @@ const ProjectsSection = () => {
 
   const featuredProjects = [
     {
-      name: "NOVA - AI Voice Assistant",
-      description: "Multi-modal AI assistant with multilingual speech-to-text and real-time face recognition. Features secure authentication and voice-driven utilities.",
-      tech: ["Python", "Whisper-v3", "DeepFace", "OpenCV", "YOLOv11"],
-      status: "In Progress",
-      github: "https://github.com/Vijay-48"
-    },
-    {
       name: "HOD Notification System",
       description: "AI-powered system for detecting unauthorized student movements using computer vision with email alerts and snapshots.",
       tech: ["LSTM", "YOLOv8", "FaceNet", "OpenCV", "Flask"],
       status: "Completed",
-      github: "https://github.com/Vijay-48"
+      github: "https://github.com/Vijay-48/HOD-Notification-System-for-Student-Truancy"
     },
     {
       name: "Decentralized Document Verification",
       description: "Tamper-proof platform for secure document verification on distributed ledger with IPFS integration.",
       tech: ["Blockchain", "Solidity", "IPFS", "Web3.js", "Ethereum"],
       status: "Completed",
-      github: "https://github.com/Vijay-48"
+      github: "https://github.com/Vijay-48/Decentralized-Document-Verification-System"
+    },
+    {
+      name: "AI-Generated-Code-Security-Auditor",
+      description: "AI-powered security scanner with multi-model LLM integration, advanced analytics, and comprehensive vulnerability detection for modern development workflows.",
+      tech: ["python", "llm", "deepseek", "Fast API", "Rest API", "Docker"],
+      status: "Production Stage",
+      github: "https://github.com/Vijay-48/AI-Generated-Code-Security-Auditor"
     }
   ];
 

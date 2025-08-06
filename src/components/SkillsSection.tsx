@@ -4,21 +4,28 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
   const skillGroups = {
-    "AI/ML": [
-      "LSTM", "YOLOv8", "FaceNet", "TensorFlow", "OpenCV", "Computer Vision", 
-      "Deep Learning", "Neural Networks"
+    "🤖 AI/ML Engineering": [
+      "Python", "TensorFlow", "PyTorch", "Scikit-learn",
+      "Computer Vision", "Deep Learning", "NLP", "MLOps"
     ],
-    "Frontend": [
-      "ReactJS", "JavaScript", "TypeScript", "HTML5", "CSS", "Tailwind CSS",
-      "Lightning Web Components", "JSON", "Ajax"
+    "🔬 Specialized AI": [
+      "YOLOv8", "OpenCV", "LSTM", "Transformers", 
+      "Object Detection", "Neural Networks", "LLMs"
     ],
-    "Backend & Tools": [
-      "Python", "Java", "Apex", "Salesforce", "Git/GitHub", "VS Code",
-      "Postman", "Jira", "CI/CD", "RESTful APIs"
+    "💻 Full-Stack Development": [
+      "React", "TypeScript", "Python", "Java",
+      "RESTful APIs", "MongoDB", "Salesforce"
     ],
-    "Blockchain": [
-      "Solidity", "Web3.js", "Ethereum", "IPFS", "Truffle", "Ganache",
-      "Smart Contracts", "DeFi"
+    "☁️ Cloud & DevOps": [
+      "Firebase", "Docker", "CI/CD",
+      "Git/GitHub", "Model Deployment"
+    ],
+    "🔗 Blockchain": [
+      "Solidity", "Web3.js", "Ethereum", "Smart Contracts"
+    ],
+    "📊 Data Science": [
+      "Pandas", "NumPy", "SQL", "Power BI", 
+      "Statistical Analysis", "Data Visualization"
     ]
   };
 
