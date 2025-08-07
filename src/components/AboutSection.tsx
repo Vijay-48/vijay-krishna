@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const RESUME_DRIVE_LINK = "https://drive.google.com/uc?export=download&id=12zDOfdOUn4BmF-uTbi-s0xdlGVf_-yzu";
+const RESUME_DRIVE_LINK = "https://drive.google.com/file/d/1oQNEmr3kdMSQpuXxmT_my8UQa35KaZGU/view?usp=sharing";
 
 const AboutSection = () => {
   return (
