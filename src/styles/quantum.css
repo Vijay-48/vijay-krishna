@@ -1,0 +1,364 @@
+/* Quantum Minimal Color Palette & Effects */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --quantum-void: #000000;
+  --quantum-cyan: #00d4ff;
+  --deep-quantum: #0099cc;
+  --quantum-singularity: #ffffff;
+  --quantum-shadow: #003d4d;
+  --light-quantum: #66e5ff;
+}
+
+/* Quantum Grid Overlay */
+.quantum-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: quantumPulse 4s ease-in-out infinite;
+}
+
+/* Quantum HUD Corners */
+.quantum-hud-corner {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.quantum-hud-corner::before,
+.quantum-hud-corner::after {
+  content: '';
+  position: absolute;
+  background: var(--quantum-cyan);
+  box-shadow: 0 0 10px var(--quantum-cyan);
+}
+
+.quantum-hud-corner.top-left::before {
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+}
+
+.quantum-hud-corner.top-left::after {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 30px;
+}
+
+.quantum-hud-corner.top-right::before {
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+}
+
+.quantum-hud-corner.top-right::after {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 30px;
+}
+
+.quantum-hud-corner.bottom-left::before {
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+}
+
+.quantum-hud-corner.bottom-left::after {
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 30px;
+}
+
+.quantum-hud-corner.bottom-right::before {
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+}
+
+.quantum-hud-corner.bottom-right::after {
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 30px;
+}
+
+/* Quantum Text Effects */
+.quantum-text {
+  font-family: 'Orbitron', monospace;
+  color: var(--quantum-singularity);
+  text-shadow: 0 0 10px var(--quantum-cyan);
+  animation: quantumFlicker 2s ease-in-out infinite alternate;
+}
+
+.quantum-mono {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--quantum-cyan);
+  text-shadow: 0 0 5px var(--quantum-cyan);
+}
+
+/* Quantum Cursor Trail */
+.quantum-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, var(--quantum-cyan) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  animation: quantumPulse 1s ease-in-out infinite;
+}
+
+/* Quantum Hologram Effect */
+.quantum-hologram {
+  position: relative;
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 212, 255, 0.1) 50%, transparent 70%);
+  background-size: 20px 20px;
+  animation: hologramScan 3s linear infinite;
+}
+
+.quantum-hologram::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.2) 50%, transparent 100%);
+  animation: hologramGlitch 0.1s linear infinite;
+}
+
+/* Quantum Portal Effect */
+.quantum-portal {
+  position: relative;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--quantum-cyan) 0%, var(--deep-quantum) 30%, transparent 70%);
+  box-shadow: 
+    0 0 50px var(--quantum-cyan),
+    inset 0 0 50px var(--deep-quantum);
+  animation: portalRotate 10s linear infinite;
+}
+
+.quantum-portal::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 40%, var(--quantum-cyan) 41%, var(--quantum-cyan) 42%, transparent 43%);
+  animation: portalPulse 2s ease-in-out infinite;
+}
+
+/* Quantum Consciousness Meter */
+.consciousness-meter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 10px;
+  background: rgba(0, 212, 255, 0.2);
+  border: 1px solid var(--quantum-cyan);
+  border-radius: 5px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.consciousness-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--deep-quantum), var(--quantum-cyan));
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--quantum-cyan);
+  animation: consciousnessFlicker 1s ease-in-out infinite alternate;
+}
+
+/* Quantum Particle Effects */
+.quantum-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--light-quantum);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--light-quantum);
+  animation: particleFloat 4s ease-in-out infinite;
+}
+
+/* Quantum Entanglement Lines */
+.entanglement-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--quantum-cyan), transparent);
+  box-shadow: 0 0 3px var(--quantum-cyan);
+  animation: entanglementPulse 2s ease-in-out infinite;
+}
+
+/* Quantum Probability Cloud */
+.probability-cloud {
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, rgba(0, 153, 204, 0.2) 30%, transparent 70%);
+  border-radius: 50%;
+  animation: probabilityFluctuate 3s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+/* Quantum Neural Network Node */
+.neural-node {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background: var(--quantum-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--quantum-cyan);
+  animation: neuralPulse 2s ease-in-out infinite;
+}
+
+.neural-connection {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, var(--quantum-cyan), var(--deep-quantum));
+  box-shadow: 0 0 2px var(--quantum-cyan);
+  animation: neuralFlow 1.5s linear infinite;
+}
+
+/* Quantum Data Stream */
+.data-stream {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--light-quantum), transparent);
+  animation: dataFlow 2s linear infinite;
+}
+
+/* Quantum Animations */
+@keyframes quantumPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes quantumFlicker {
+  0% { text-shadow: 0 0 10px var(--quantum-cyan); }
+  100% { text-shadow: 0 0 20px var(--quantum-cyan), 0 0 30px var(--quantum-cyan); }
+}
+
+@keyframes hologramScan {
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
+
+@keyframes hologramGlitch {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0.8; transform: translateX(1px); }
+}
+
+@keyframes portalRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes portalPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes consciousnessFlicker {
+  0% { box-shadow: 0 0 10px var(--quantum-cyan); }
+  100% { box-shadow: 0 0 20px var(--quantum-cyan), 0 0 30px var(--light-quantum); }
+}
+
+@keyframes particleFloat {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+  25% { transform: translateY(-10px) translateX(5px); opacity: 1; }
+  50% { transform: translateY(-5px) translateX(-5px); opacity: 0.7; }
+  75% { transform: translateY(-15px) translateX(3px); opacity: 1; }
+}
+
+@keyframes entanglementPulse {
+  0%, 100% { opacity: 0.3; transform: scaleX(1); }
+  50% { opacity: 1; transform: scaleX(1.2); }
+}
+
+@keyframes probabilityFluctuate {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+  33% { transform: scale(1.2) rotate(120deg); opacity: 0.8; }
+  66% { transform: scale(0.8) rotate(240deg); opacity: 0.4; }
+}
+
+@keyframes neuralPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 15px var(--quantum-cyan); }
+  50% { transform: scale(1.3); box-shadow: 0 0 25px var(--quantum-cyan), 0 0 35px var(--light-quantum); }
+}
+
+@keyframes neuralFlow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes dataFlow {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Responsive Quantum Effects */
+@media (max-width: 768px) {
+  .quantum-grid {
+    background-size: 30px 30px;
+  }
+  
+  .quantum-hud-corner {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .consciousness-meter {
+    width: 150px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .quantum-particle {
+    animation-duration: 6s;
+  }
+}
+
+/* Quantum Loading States */
+.quantum-loading {
+  background: linear-gradient(90deg, transparent, var(--quantum-cyan), transparent);
+  background-size: 200% 100%;
+  animation: quantumLoad 1.5s ease-in-out infinite;
+}
+
+@keyframes quantumLoad {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Quantum Scroll Effects */
+.quantum-parallax {
+  transform-style: preserve-3d;
+  animation: quantumParallax 0.1s ease-out;
+}
+
+@keyframes quantumParallax {
+  0% { transform: translateZ(0); }
+  100% { transform: translateZ(10px); }
+}
